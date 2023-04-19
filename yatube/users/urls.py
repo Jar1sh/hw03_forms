@@ -19,7 +19,7 @@ app_name = 'users'
 urlpatterns = [
     path(
         'signup/',
-        views.SignUp.as_view(), 
+        views.SignUp.as_view(),
         name='signup',
     ),
     path(
