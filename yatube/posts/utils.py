@@ -1,6 +1,7 @@
 from django.core.paginator import Paginator
 from django.conf import settings
 
+
 def paginator(request, posts):
     paginator = Paginator(posts, settings.POSTS_PER_PAGE)
     page_number = request.GET.get('page')
