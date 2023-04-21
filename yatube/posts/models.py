@@ -61,4 +61,4 @@ class Post(models.Model):
         verbose_name_plural = 'Сообщения'
 
     def __str__(self):
-        return self.text
+        return self.text[:15]
