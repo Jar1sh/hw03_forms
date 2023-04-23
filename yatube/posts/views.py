@@ -33,7 +33,7 @@ def group_list(request, slug):
 def profile(request, username):
     author = get_object_or_404(User, username=username)
     page_obj = paginate_posts(request, author.posts.all())
-    count = author.posts.count
+    count = author.posts.count()
     context = {
         'count': count,
         'author': author,
@@ -44,7 +44,7 @@ def profile(request, username):
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
-    count = post.author.posts.count
+    count = post.author.posts.count()
     context = {
         'count': count,
         'post': post,
